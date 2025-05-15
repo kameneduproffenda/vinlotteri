@@ -43,6 +43,7 @@ public class TicketController {
         for (Integer ticket : requestedTickets) {
             soldTickets.put(ticket, request.buyerName());
         }
+        System.out.println("Deploying to Azure");
         return ResponseEntity.ok("Lodd kjøpt for" + request.buyerName() + ": " + requestedTickets);
     }
 }
